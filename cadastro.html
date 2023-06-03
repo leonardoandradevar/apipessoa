@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>Cadastre-se</h2>
+    <label for="txt_nome">Nome :</label>
+    <input type="text"  placeholder="Digite o usuário" id="txt_nome" /><br><br>
+
+    <label for="txt_usuario">Usuário :</label>
+  <input type="text"  placeholder="Digite o usuário" id="txt_usuario" /><br><br>
+
+  <label for="txt_senha">Senha :</label>
+  <input type="password"  placeholder="Digite a senha" id="txt_senha" /><br><br>
+
+  <label for="txt_confisenha">Confirme a senha  :</label>
+  <input type="password"  placeholder="Confirme a senha " id="txt_confisenha" /><br><br>
+  
+  <button class="roxo" onclick="Cadastrar() ">Cadastrar</button>
+
+</body>
+</html>
+<script>
+function Cadastrar(){
+    if ($("#txt_senha").val() != $("#txt_confisenha").val()){
+alert('As senhas não conferem!!!');
+return;
+    }
+var requestCadastro ={
+    "nome": $("#txt_nome").val(),
+    "usuario": $("#txt_usuario").val(),
+    "senha": $("#txt_senha").val(),
+    "confisenha" : $("#txt_confisenha").val(),
+        }
+    
+$.ajax({
+url:"http://localhost:34788/usuario",
+type:"Post",
+data: JSON.stringify(requestCadastro),
+contentType:"application/json",
+dataType:"json",
+
+    success: function(response){
+  window.location.href='./login.html';
+},
+error:function(request,message,error ){
+  alert("Erro ao se cadastrar")
+}
+})
+}
+</script>

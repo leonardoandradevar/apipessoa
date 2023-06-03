@@ -1,0 +1,82 @@
+body {
+   width: 700px;
+   margin:auto ;
+}
+
+input {
+    width:100%;
+    border: 0;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    padding: 7px;
+    background: transparent;
+    margin-top: 12px;
+    margin-bottom: 12;
+
+}
+
+label {
+   font-size: 20px; 
+   margin-bottom: 12px;
+
+}
+
+table {
+    
+   height: 100%;
+    border: 1px solid gray;
+}
+th,td {
+    padding: 10px;
+}
+.table-row {
+    background-color: white;
+    box-shadow: 0px 0px 9px 9px rgb(0,0,0,0.1);
+}
+
+.btn {
+     color: rgb(0, 0, 0);
+     background-color: rgb(242, 0, 0);
+     border-radius: 6px;
+     border-width: 0;
+     color: white;
+     cursor: pointer;
+     height: 44px;
+     margin:12px 0 0 0 ;
+     padding: 0 25px;
+     width: 100%;
+}
+.btncadastro {
+    color: rgb(0, 0, 0);
+     background-color: rgb(34, 0, 255);
+     border-radius: 6px;
+     border-width: 0;
+     color: white;
+     cursor: pointer;
+     height: 44px;
+     margin:12px 0 0 0 ;
+     padding: 0 25px;
+     width: 100%;
+}
+.roxo{
+    background-color:blueviolet ;
+    border-radius: 6px;
+    border-width: 0;
+    color: white;
+    cursor: pointer;
+    height: 44px;
+    margin:12px 0 0 0 ;
+    padding: 0 25px;
+    width: 100%;
+}
+.btnverde{
+    background-color: green;
+    border-radius: 6px;
+    border-width: 0;
+    color: white;
+    cursor: pointer;
+    height: 44px;
+    margin:12px 0 0 0 ;
+    padding: 0 25px;
+    width: 100%;
+}
